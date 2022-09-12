@@ -1,0 +1,185 @@
+OOPs Concepts in Python:
+	- class
+	- object
+	- abstraction
+	- encapsulaion
+	- inheritance
+	- polymorphism
+	
+	# Class:
+		- blueprint followed by objects
+		- logical structure with behavior
+		# a class can have attributes (data) and functions, these two are called class members
+	 
+	# Object:
+		- instance of a class
+		- use to access methods of class
+	
+	# Abstractions:
+		- hiding the implementation details
+		- showing only the essential details
+	
+	# Encapsulation:
+		- wrapping up data and fucntion into a single entity
+	
+	# Access Specifiers:
+		- Public:
+			can be accessed by any fucntion in any class
+		- Protected:
+			can be accessed by only where it was declared or by the inherited class
+		- Private:
+			can be accessed only by class where it was declared
+	
+	# Inheritance:
+		- derived class can inherit the properties of the base class
+	
+	# Polymorphism:
+		- implementation of same methods in different context
+		- methods with same name is implemented in different way
+		
+Class:
+	Synatx:
+		class class_name:
+			data
+			fucntion
+			
+		ex:
+		class student:
+	
+			r_no = 123
+			name = 'abc'
+			course = 'cse'
+			
+			def read(self):
+				print()
+			def write(self):
+				print()
+		
+		#Object creation:
+		object_name = class_name()
+		
+		ex:
+		s1 = student()
+		s2 = student()
+		
+		# variables inside the class and the outside the fucntion are called instance variables
+		# varibles inside the fucntion are called local variables
+
+Inheritance:
+	-acquiring the properties
+	
+	Types:
+		1. Single Inheritance:
+			one base class and one derived class
+			
+			class parent:
+				pvariables
+				pmethods
+			
+			class child(parent): #inheritance
+				cvariables
+				cmethods
+			
+		2. 	Multi level Inheritance:
+			acquiring the properties level wise
+			
+			class grandParent:
+				gvariables
+				gmethods
+			
+			class parent(grandParent): # inheritance level 1
+				pvariables
+				pmethods
+			
+			class child(parent): # inheritance level 2
+				cvariables
+				cmethods
+			
+			child can access methods and variables of parent as well as grandParent
+		
+		3. Heirarchial Inheritance:
+			one base class and multiple derived class
+			
+			class parent:
+				pvariables
+				pmethods
+			
+			class child_1(parent):
+				c1variables
+				c1methods
+			
+			class child_2(parent):
+				c2variables
+				c2methods
+		
+		4. Multple Inheritance:
+			multiple parents but one derived class
+			
+			class father:
+				fvariables
+				fmethods
+			
+			class mother:
+				mvariables
+				mmethods
+			
+			class child(father, mother):
+				cvariables
+				cmethods
+			
+Encapsulation:
+	wrapping of data
+	combining variables and methods
+	
+	#default access modifier public
+	a = 10 (public)
+	__a = 10 (private)
+
+Abstract Class:
+	class which have abstract methods
+	
+	Abstract Method:
+		method with declaration but not the defination
+	
+Concrete Class:
+	class which doesn't have any abstract method
+
+# objects can not be instantiated for abstract class
+# objects can only be instantiated for concrete class
+# to change from abstract to concrete class:
+	implement the concrete class from abstract class and define all its methods
+
+class A():
+	@abstractmethod
+	def fucn(self):
+		None
+	
+class B(A):
+	def display(self):
+		print()
+	
+Polymorphism:
+	- implementation of same methods in different ways
+	- achieved using 2 ways
+		- overloading
+		- overriding
+	
+	Overloading:
+		- operator overloading
+		- method overloading
+		
+		Operator overloading:
+			- +:
+				concatenation(string) and summation(number)
+		
+		
+		Method Overloading:
+			- method name should be same and arguments must be different
+			- add(a, b)
+			  add(a, b, c)
+			
+	Overiding:
+		method name and number of arguments should be same
+		but defination is different
+		overriding the fucntion in derived class
+		if derived class object calls the fucntion , the over ridden function is called
